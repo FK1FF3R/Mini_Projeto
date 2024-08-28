@@ -1,0 +1,91 @@
+:root {
+    --rosa: #ff6361;
+    --branco: #f0f0f0;
+    --roxo: #8a508f;
+    --cor-do-texto: #333;
+    --border-radius: 5px;
+    --tempo: 0.3s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--branco);
+    font-family: Arial, sans-serif;
+    color: var(--cor-do-texto);
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lista-de-compras {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--branco);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--roxo);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--tempo);
+}
+
+li:hover {
+    background-color: var(--rosa);
+    color: #fff;
+}
+
+.adc-item {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+button {
+    padding: 10px;
+    background-color: var(--rosa);
+    color: #fff;
+    border: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color var(--tempo);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lista-de-compras {
+    animation: fadeIn var(--tempo) ease-in;
+}

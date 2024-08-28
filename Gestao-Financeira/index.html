@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/porco.png">
+    <title>Gestor Financeiro Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor Financeiro</h1>
+    </header>
+    <main>
+        <section id="balanco">
+            <h2>Saldo Atual</h2>
+            <p id="balanco-atual">R$ 0,00</p>
+        </section>
+        <section id="transacoes">
+            <h2>Transações</h2>
+            <ul id="lista-de-transacoes">
+                <!-- Transações serão adicionadas aqui -->
+            </ul>
+        </section>
+        <section id="add-transacoes">
+            <h2>Adicionar Transação</h2>
+            <form id="transacoes-form">
+                <label for="Descricao">Descrição:</label>
+                <input type="text" id="Descricao" required>
+                <label for="valor">Valor (positivo para entrada, negativo para saída):</label>
+                <input type="number" id="valor" required>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

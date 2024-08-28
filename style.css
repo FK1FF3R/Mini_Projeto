@@ -1,0 +1,604 @@
+/* padrao geral */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+  }
+  
+  body {
+    background-color: var(--cor-de-fundo);
+    max-height: 100%;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .topo {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .display{
+    display: flex;
+  }
+
+  .curva{
+    width: 100%;
+    height: auto;
+    background-color: var(--secundaria);
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+
+  .onda{
+    width: 100%;
+    height: auto;
+    background-color: var(--primaria);
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+
+  @keyframes appear{
+    from{
+      opacity: 0;
+      scale: 0.5;
+      transition: .2s;
+    }
+    to {
+      opacity: 1;
+      scale: 1; 
+      transition: .2s;
+    }
+  }
+
+  .caixa{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+  }
+
+  .stack{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+  }
+
+  :root{
+    --primaria: #314026;
+    --cor-de-fundo: #11150d;
+    --complementar: #94bf73;
+    --secundaria: #526a40;
+    --terciaria: #739559;
+    --cor-texto: #b5ea8c;
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-texto);
+    padding: 30px;
+    box-shadow: 0 -5px 10px var(--secundaria);
+  }
+
+  /* cabeçalho */
+  header{
+    padding: 40px 5%;
+    border-bottom: solid var(--primaria);
+    padding: 20px;
+  }
+
+  header > .topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo h3{
+    font-family: "Baskervville SC", serif;
+    color: var(--cor-texto);
+    font-size: 50px;
+  }
+
+  .logo span{
+    color: var(--primaria);
+    font-family: "Baskervville SC", serif;
+  }
+
+  header .logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  header .menu{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  header .contato {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  header a{
+    color: var(--primaria);
+  }
+
+  header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  header nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+  header .botao-contato{
+    margin-left: 20px;
+  }
+
+
+  header .botao-contato button{
+    padding: 10px 40px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--cor-texto);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px var(--secundaria);
+    border: solid var(--cor-de-fundo) 3px;
+    cursor: pointer;
+  }
+
+  header .botao button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--secundaria);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px var(--secundaria);
+    border: 0;
+    cursor: pointer;
+  }
+
+  header .botao button:hover{
+    transform: scale(1.10);
+    transition: .1s;
+    color: var(--cor-texto);
+  }
+  
+  header .botao-contato button:hover{
+    transform: scale(1.10);
+    transition: .1s;
+  }
+
+  @media (max-width: 768px) {
+    p {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+  }
+  
+  /* Media Query para telas pequenas */
+  @media (max-width: 768px) {
+    header nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:30px;
+    }
+
+    header nav ul {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width:884px){
+    .menu-nav, .botao-contato {
+      display: none;
+    }
+  }
+  /* Final cabeçalho */
+
+  /* COMEÇO SECTION corpo*/
+  section .corpo{
+    padding: 40px;
+  }
+
+  section .corpo .display{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .corpo h1{
+    color: var(--primaria);
+    font-size: 45px;
+    gap: 40px;
+    line-height: 40px;
+  }
+  
+  .corpo span{
+    color: var(--cor-texto);
+  }
+
+  .corpo{
+    background-color: var(--secundaria);
+    padding: 80px 30px 80px 30px; 
+  }
+
+  .display .texto-lateral{
+    background-color: none;
+    width:50vw;
+    margin-top: 25px;
+    overflow-wrap: break-word;
+  }
+
+  .corpo .texto-lateral p{
+    color: var(--cor-texto);
+    margin: 40px 0;
+    text-align: justify;
+  }
+  
+  .corpo .display .imagem-lateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .corpo .display .imagem-lateral img {
+    width: 50%; 
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* FINAL SECTION corpo */
+
+  /* COMEÇO SECTION linguagens */
+  .linguagens{
+    background-color: var(--primaria);
+    padding: 80px 30px 80px 30px;
+  }
+
+  .linguagens .interface h2{
+    color: var(--terciaria);
+    font-size: 45px;
+    margin-left: 30px;
+    margin-right: 15px;
+  }
+
+  .linguagens span{
+    color: var(--cor-texto);
+  }
+
+  .linguagens p{
+    color: var(--cor-texto);
+    margin: 40px 0;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .linguagens .display{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .stack{
+    width: 500px;
+    background-color: var(--terciaria);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px var(--cor-texto);
+  }
+
+  .stack ul li{
+    margin: 20px 0;
+    color: var(--primaria);
+  }
+
+  .stack .barras{
+    background-color: var(--secundaria);
+    display: block;
+    height: 20px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+  }
+
+  .barras > span{
+    height: 20px;
+    background-color: white;
+    position: absolute;
+  }
+
+  .html{
+    width: 80%;
+    animation: html 5s;
+  }
+
+  .css{
+    width: 60%;
+    animation: css 5s;
+  }
+
+  .javascript{
+    width: 23%;
+    animation: javascript 5s;
+  }
+
+  @keyframes html{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 80%;
+    }
+  }
+
+  @keyframes css{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 60%;
+    }
+  }
+
+  @keyframes javascript{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 23%;
+    }
+  }
+
+  .linguagens .stack img{
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  /* FINAL SECTION linguagens */
+
+  /* COMEÇO SECTION projetos */
+  
+  section .projetos{
+    padding: 40px 5%;
+  }
+
+  .projetos {
+    background-color: var(--terciaria);
+    padding: 80px 30px 80px 30px;
+  }
+
+  .projetos .interface h2{
+    color: var(--secundaria);
+    font-size: 45px;
+    margin-left: 30px;
+    margin-right: 15px;
+  }
+
+  .projetos span{
+    color: var(--cor-texto);
+  }
+
+  .projetos .interface p{
+    color: var(--cor-texto);
+    margin: 40px 0;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 15px;
+    overflow-wrap: break-word;
+  }
+
+  .projetos .display{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .caixa:hover{
+    transform: scale(1.10);
+    transition: .1s;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px var(--secundaria);
+  }
+
+  .caixa {
+    width: 300px;
+    height: 500px;
+    border:solid var(--terciaria);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secundaria);
+    opacity: 0;
+    transition: .5s;
+  }
+
+  .overlay:hover{
+    opacity: 1;
+  }
+
+  .overlay h3{
+    color: var(--cor-texto);
+  }
+
+  .overlay i{
+    visibility: hidden;
+  }
+  
+  .caixa2 {
+    background-image: url(Gestao-Financeira/img/gestao-proj.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .caixa1 {
+    background-image: url(lista-de-compras/img/lista-proj.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .caixa3 {
+    background-image: url(calculadora/img/calc-proj.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  @media (max-width: 768px){
+    .caixa{
+      width: 300px;
+      height: 200px;
+      border:solid var(--terciaria);
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 15px;
+      background-position: 100% 0;
+    }
+
+    .caixa:hover{
+      background-position: 100% 100%;
+      transition: 5s;
+    }
+
+    .overlay{
+      background-color: #11150dd5;
+    }
+
+    .overlay i{
+      visibility: visible;
+      opacity: 1;
+      color: var(--cor-texto);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      font-size: 30px;
+    }
+
+    .overlay h3{
+      color: var(--cor-texto);
+      font-size: 24px;
+    }
+  }
+
+  /* FiNAL SECTION projetos */
+  
+  @media (max-width: 1024px) {
+    .corpo .display {
+        flex-direction: column;
+    }
+
+    .corpo .display .imagem-lateral {
+        margin-top: 20px;
+    }
+
+    .imagem-lateral{
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0;
+    }
+
+    .corpo .texto-lateral {
+        width: 100%;
+    }
+
+    .corpo .display .imagem-lateral img {
+        width: 50%;
+    }
+  }
+
+  /* rodape */
+
+  .contatos .social-links {
+    margin-top: 20px;
+  }
+
+  .contatos .social-links button{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: var(--primaria);
+    border: none;
+    margin: 10px;
+  }
+
+  .contatos .social-links i{
+    font-size: 30px;
+  }
+
+  .contatos .social-links button:hover{
+    transform: scale(1.10);
+    transition: .1s;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px var(--secundaria);
+  }
+
+  .contatos a {
+    color: var(--cor-de-fundo);
+    font-size: 24px;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px){
+    .contatos .social-links {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .contatos .social-links button {
+      margin: 0;
+    }
+  }
+
+    @media (max-width: 1024px) {
+    .botao-contato{
+      margin-top: 20px;
+    }
+  }
